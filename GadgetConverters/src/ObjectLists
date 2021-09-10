@@ -1,0 +1,30 @@
+#  Lists of all the various file locations
+
+
+#First the various general routines
+GenObj= GalObjDef.o SolarParams.o ParticleReadInObj.o GShiftObj.o
+GenMath=StandardConsts.o MatrixMath.o MatrixDecompose.o EulerRotation.o FullCircleAngles.o GammaFn.o erfcLib.o SetNan.o AngDist.o
+CoordObj= RecenterCart.o CartAngleConvert.o CartGalConvert.o
+SortObj=SortArray.o
+COMObj=CenterOfMass.o
+GalIO=GalactICSReadin.o GalactICSAsciiOut.o GadgetOut.o GadgetRead.o OriginalPartIDReadIn.o GalShiftTargReadIn.o GalCentReadIn.o
+GalCompMath=GalAdd.o GalSplit.o
+GalAdjust=GalObsCent.o GalRotate.o GalMove.o GalUnitConvert.o CenterGal.o GalAngular.o GalObservables.o
+RanObj=ran3.o
+
+GeneralObjects=$(GenObj) $(GenMath) $(CoordObj) $(SortObj) $(COMObj) $(GalIO) $(GalCompMath) $(GalAdjust) $(RanObj)
+
+
+
+#Second the converter routines
+
+ConverterGlob=ConvertersGlobal.o CompSelectGlobal.o
+ConverterInputs=GalCombineRTInputs.o GalactICSCompReadIn.o CompSelectRTInputs.o
+AllGalCompCombine=AllGalaxyCompCombine.o
+ConverterOutputs=AllGalactICSGalOut.o AllGadgetGalOut.o
+ConverterMoveGalObj=MoveGalPos.o
+ConvertMainObj=GalCombine.o ascii2gadget_gasIni.o CompSelect.o
+
+
+ConvertObj=$(ConverterGlob) $(ConverterInputs) $(AllGalCompCombine) $(ConverterMoveGalObj) $(ConverterOutputs)
+

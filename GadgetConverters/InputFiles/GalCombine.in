@@ -1,0 +1,25 @@
+1	5			#number of Galaxies and maximum number of components
+#Path for the GalactICS files
+GalactICSOutputs/McMillan2017NoHoleFit/
+#First Galaxy
+5				#number of components in Galaxy 1
+gasdisk,	0
+bulge,		1
+disk,		2
+disk2,		2
+halo,		3
+McMillan2017DNC
+#Output ascii Combined Galaxy file
+McMillan2017_NoHoleFit
+#Output ascii file with particle number/ids for separating galaxies
+McMillan2017PartIDs
+0.		#Time
+0.		#Redshift
+0		#SFR Flag
+0		#Feedback Flag
+0		#Cooling Flag
+0.		#Box size
+0.		#Omega0
+0.		#Omega Lambda
+0.		# Hubble Parameter
+

@@ -1,0 +1,6 @@
+300000	#number of particles
+-1	#random integer seed
+1	#1=yes we want to center 0=no we don't
+dbh.dat	#multipole expansion data file
+100	#number of points for normalization spline
+1	#Adiabatic or Isothermal EOS for Gadget (1 or 2)

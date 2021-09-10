@@ -1,0 +1,35 @@
+2	5			#number of Galaxies and maximum number of components
+#Path for the GalactICS files
+GalactICSOutputs/FiducialModel/
+#First Galaxy
+4				#number of components in Galaxy 1
+gasdisk,	0
+bulge,		1
+disk,		2
+halo,		3
+Gal1
+#Second Galaxy
+4				#number of components in Galaxy 2
+gasdisk,	0
+bulge,		1
+disk,		2
+halo,		3
+Gal2
+#Adjustments to second galaxy	
+0.	180.	0.		#Euler Rotations
+0.	300.	0.		#Galaxy 2 COM (in kpc)
+0.	-0.25	0.		#Galaxy 2 COV (in 100 km/s)
+#Output ascii Combined Galaxy file
+FiducialModel
+#Output ascii file with particle number/ids for separating galaxies
+FiducialModelPartIDs
+0.		#Time
+0.		#Redshift
+0		#SFR Flag
+0		#Feedback Flag
+0		#Cooling Flag
+0.		#Box size
+0.		#Omega0
+0.		#Omega Lambda
+0.		# Hubble Parameter
+

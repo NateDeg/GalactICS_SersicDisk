@@ -1,0 +1,27 @@
+##compiler options
+LocalPath=/Users/nate/Dropbox/GalactICS_SersicDisk/GadgetConverters/
+
+LocModLoc=$(LocalPath)/Mods
+LocBinLoc=$(LocalPath)/Bin
+
+locObj=$(LocalPath)/src/ObjectLists
+
+include $(locObj)
+
+.f.o:
+	$(F77) $(FLAGS) -c -I$(LocModLoc) *.f
+
+.c.o:
+	$(CC) $(CFLAGS) -c *.c
+
+MakeFObj=$(F77) $(FLAGS) -c -I$(LocModLoc)
+
+F77=mpifort
+#F77=gfortran -Wall -fpic -g -fbacktrace
+CC=gcc
+FLAGS=-ffast-math -O0 -funroll-loops
+#FLAGS=-ffixed-line-length-0 -O -fno-backslash 
+CFLAGS= -O -DRINGASCII -DASCII 
+
+
+

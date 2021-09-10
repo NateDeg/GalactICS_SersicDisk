@@ -1,0 +1,50 @@
+#  Lists of all the various file locations
+
+MathObj=StandardConsts.o GammaFn.o Legendre.o RootFinder.o Factorial.o SimpsonsInt.o Spline.o ran3.o
+SortObj=SortArray.o
+Obj= DPFrObj.o haloObject.o BulgeObject.o GasObject.o BHObject.o DiskObject.o PotObject.o DFObject.o PartObj.o
+Glob=GlobalDecs.o GenCompGlobsDecs.o
+HaloObj=nfwprofiles.o halodensity.o halopotentialestimate.o TabulatedHaloProfile.o AlphaBetaGammaHaloProfile.o
+DiskObj=diskdensity.o diskpotentialestimate.o appdiskpot.o
+GasSurfDensObj=gassurfdensity.o
+GasDensObj=gasdensity.o
+BulgeObj=sersicprofiles.o
+BHObj=BHForce.o
+TDensObj=TotalDens.o 
+GasVertObj=getzgas.o
+GasPotObj=gaspotentialestimate.o appgaspot.o
+MassRingObj=DiskMassRing.o
+InputObj=dbhRuntimeInputs.o genHaloInputs.o genBulgeInputs.o getFreqsInputs.o ReadHarmFile.o ReadMassRad.o ReadDensPsi.o ReadZGasGrid.o diskdfInputs.o genDiskInputs.o ReadDiskDF.o genGasInputs.o
+omekapObj=omekap.o
+IniObj=dbhInitialization.o genHaloInitialization.o genBulgeInitialization.o diskdfInitialization.o  genDiskInitialization.o genGasInitialization.o
+TotPotEstObj=TotalPotEstimate.o
+PotFromGridObj=pot.o
+GasVertGridObj=ZGasGridFrPot.o getgasnorm.o
+ForceObj=CalcTotForce.o forceFromGrid.o
+PsiObj=getpsi.o 
+DFObj=generaldfRoutines.o gendf.o gendfBulge.o gendfHalo.o
+GenDPObj=gendenspsi.o gendenspsibulge.o gendenspsihalo.o 
+TDensPsiObj= diskdens.o gasdenspsi.o DensityFromPsi.o GenGridDens.o GridDens.o HaloGridDens.o BulgeGridDens.o
+PotObj=TotalPotCalc.o halopotential.o bulgepotential.o
+CalcFreqsObj=CalcFreqs.o
+DiskDFObj=diskdensf.o sig2.o rcirc.o fnamidden.o diskdfIntez.o diskdfez.o CalcDiskDF.o
+MakeCompObj=MakeSphericalComponent.o MakeHalo.o MakeBulge.o MakeDisk.o MakeGas.o
+COMObj=COMAdjust.o
+
+OutputObj=GenDensPotForceOut.o DBHOutputs.o GenNBodyOutputs.o GetFreqsOutput.o 
+
+
+
+LocalObj = $(MathObj) $(SortObj) $(HaloObj) $(DiskObj) $(GasSurfDensObj) $(BulgeObj) $(BHObj) $(Obj) $(Glob) $(TDensObj) $(GasVertObj) $(GasPotObj) $(GasDensObj) $(InputObj) $(omekapObj) $(MassRingObj) $(IniObj) $(TotPotEstObj) $(PotFromGridObj) $(GasVertGridObj) $(ForceObj) $(PsiObj) $(DFObj) $(GenDPObj) $(TDensPsiObj) $(PotObj) $(CalcFreqsObj) $(DiskDFObj) $(MakeCompObj) $(COMObj) $(OutputObj)
+
+
+MainObj=dbh.o genhalo.o genbulge.o gendisk.o getfreqs.o diskdf.o gengas.o
+
+
+AnalysisObjDef=SBObj.o
+AnalysisGlobsObj=AnalysisGlobs.o
+AnalysisInObj=SurfBrightIn.o GalIn.o
+AnalysisSBObj=CalcSB.o
+MainAnalysisObj=SurfBrightProfile.o
+
+AnalysisObj=$(AnalysisObjDef) $(AnalysisGlobsObj) $(AnalysisInObj) $(AnalysisSBObj) $(Obj)

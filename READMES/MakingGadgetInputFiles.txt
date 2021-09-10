@@ -1,0 +1,38 @@
+Making a Gadget Initial Conditions File
+
+After building a GalactICS model it is necessary to convert it to 
+the correct format for your simulations.  The programs
+GalCombine and ascii2gadget_gasIni are designed to prepare a Gadget 
+Initial Conditions File.
+
+—————
+GalCombine
+
+This program combines the various ascii outputs from GalactICS and 
+produces an ascii file in the Gadget format.  The program requires 
+that the various GalactICS output files (bulge, disk, halo, etc.) 
+are located in the same folder and an input file (see the example
+files located in GadgetConverters/InputFiles).
+
+GalCombine is designed to combine the components for multiple 
+galaxies (for merging experiments).  The input file allows 
+the user to specify the number of galaxies, the number of components
+per galaxy, and the initial position, velocity, and orientation 
+of the galaxies.  Each galaxy component must be given a Gadget particle type.
+
+GalCombine outputs ascii files for each galaxy, the Gadget ascii IC 
+file, and a index file that lists the number of different components and 
+particle ranges.  This Particle ID file has a format of:
+galaxy		Component	Gadget Particle Type	First Particle ID	Last Particle ID
+
+The command to run the program is:
+./GalCombine InputFile
+
+————
+ascii2Gadget_gasIni
+
+This program is a modified version of the ascii2Gadget program found 
+in Gadget2.  It takes the output ascii from GalCombine and converts it
+into a binary IC file that can be used in Gadget.
+
+

@@ -1,0 +1,22 @@
+##compiler options
+ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+PARENT_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST)))/..)
+
+LocModLoc=$(PARENT_DIR)/src/localMod
+LocBinLoc=$(PARENT_DIR)/src/localBin
+
+
+locObj=$(ROOT_DIR)/LocObjectLists
+
+include $(locObj)
+
+.f.o:
+	$(F77) $(FLAGS) -c -I$(LocModLoc) *.f
+
+F77=gfortran -Wall -fpic -g -fbacktrace  -fcheck=all
+CC=gcc
+FLAGS=-ffixed-line-length-0 -O -fno-backslash -m64 
+CFLAGS= -O -DRINGASCII -DASCII -m64
+
+
+
