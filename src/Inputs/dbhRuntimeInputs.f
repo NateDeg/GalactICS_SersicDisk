@@ -49,8 +49,8 @@ c Enter disk parameters
         D1%DiskUseFlag=.True.
         write(*,*)
      &        'Disk mass, scale length, rad, scale height,trunc width'
-        read(*,*) D1%rmdisk, D1%rdisk, D1%outdisk, D1%zdisk, D1%drtrunc,
-     &        D1%rhole, D1%rcore, D1%ndisk
+        read(*,*) D1%rmdisk, D1%rdisk, D1%outdisk, D1%zdisk, D1%drtrunc
+     &        ,D1%ndisk
       else
         DiskFlag1=.False.
         D1%DiskUseFlag=.False.
@@ -65,8 +65,8 @@ c Enter second disk parameters
         D2%DiskUseFlag=.True.
         write(*,*)
      &        'Disk mass, scale length, rad, scale height,trunc width'
-        read(*,*) D2%rmdisk, D2%rdisk, D2%outdisk, D2%zdisk, D2%drtrunc,
-     &        D2%rhole, D2%rcore,D2%ndisk
+        read(*,*) D2%rmdisk, D2%rdisk, D2%outdisk, D2%zdisk, D2%drtrunc
+     &       ,D2%ndisk
       else
         DiskFlag2=.False.
         D2%DiskUseFlag=.False.

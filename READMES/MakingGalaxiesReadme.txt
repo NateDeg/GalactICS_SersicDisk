@@ -49,12 +49,12 @@ is perhaps the most important of the various in. files.
 File Format
 
 y						#Use Halo
-  100. 4.25   20.1  20.  1. 3.			# R_trunc, sigma_h, R_h, d_rtrunc, alpha, beta
+  150. 5.5   30.  30.  1. 4.			# R_trunc, sigma_h, R_h, d_rtrunc, alpha, beta
 y						#Use Disk 1
-  15.  2.7  25.  0.36  3. 0.	  0.		# M_disk1, R_d1,R_dtrunc1,z_d1,z_trunc1, dummy 1, dummy 2
+  22.   0.9  30.  0.25  3.	1.5			# M_disk1, R_d1,R_dtrunc1,z_d1,z_trunc1, n_disk
 n						#Use Disk2 (if y, next line is same format as Disk1
 y						#Use gas disk
- 1.5 4.0 25. .0083 3.  -1.6667			#M_gas, R_gas, R_trunc, G_Entropy, dR_gastrunc, Gamma (keep at -5/3)
+ 3.3  6.5  40.   10000 3. -1.6667		#M_gas, R_gas, R_trunc, GasTemp (Kelvin), dR_gastrunc, Gamma (keep at -5/3)
 y						#Use Bulge
   2. -1.  3.5  1.0 40. 10.			#Sersic Index, Calc p switch, sigma_b, R_b, dummy, dummy
 n						#Use SMBH (dummy switch at the moment
@@ -92,7 +92,7 @@ This file contains parameters that determine the velocity distribution of the di
 
 File Format
  1					#Disk 1 or 2 switch
- 1.0 2.2				#sigma_r, R_sigma (usually R_sigma=R_d)
+ 0.8 2.5	0.3	1.8		#sigma_r1, R_sigma1 ,sigma_r2, R_sigma2 
  50					#number of radial spline points
  10					#number of iterations
  psfile					#dummy line
