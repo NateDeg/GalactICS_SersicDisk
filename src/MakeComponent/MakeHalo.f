@@ -54,9 +54,9 @@ c        if( mod(j,1000) .eq. 0) write(*,101,advance='no')"."
 c        if(j .eq. nPart) goto 200
       enddo
 200   continue
-      print*,
+      print*, " "
       print*, "2*kinetic/potential",2.*kinetic/potential
-      print*,
+      print*, " "
 
 101   format(A)
 

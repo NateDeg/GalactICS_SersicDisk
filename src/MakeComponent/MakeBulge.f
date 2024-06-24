@@ -39,9 +39,9 @@ c        print*, i,count
         P(i)%Mass=pMass
         if( mod(i,1000) .eq. 0) write(*,101,advance='no')"."
       enddo
-      print*,
+      print*, " "
       print*, "2*kinetic/potential",2.*kinetic/potential
-      print*,
+      print*, " "
 
 101   format(A)
 

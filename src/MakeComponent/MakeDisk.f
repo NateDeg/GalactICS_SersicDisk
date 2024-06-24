@@ -72,11 +72,11 @@ ccc        print*, i,count
         P(i)%Mass=pMass
         if( mod(i,1000) .eq. 0) write(*,101,advance='no')"."
       enddo
-      print*,
+      print*, " "
       print*, "2*kinetic/potential",2.*kinetic/potential
       print*, "kineticz,potentialz",kineticz,potentialz
       print*, "2*kinetizc/potentialz",2.*kineticz/potentialz
-      print*,
+      print*, " "
       print*, "number of density trials ",DensTrials
       print*, "number of velocity trials ",VelTrials
       close(funit)
