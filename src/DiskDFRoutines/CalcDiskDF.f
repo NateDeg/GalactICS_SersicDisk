@@ -240,6 +240,7 @@ c     &              ,DUse%sig_n
       do i=0,DUse%nrspl
         write(12,'(1x,3g17.7)') DUse%rr(i),DUse%fdrat(i),DUse%fszrat(i)
       enddo
+      close(12)
       return
       end subroutine
 ccccccccc
