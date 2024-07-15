@@ -30,6 +30,7 @@ c
 
       Type HaloObj
         real chalo,v0,a,drtrunchalo,cusp,haloconst
+        real outerslope
         real eps
         Type(DPFrObj) DPFr  !Dens-Potential-radial Force arrays (see Objects/DPFrObj.f)
         integer NUmericalTableSwitch
