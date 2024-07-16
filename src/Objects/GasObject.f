@@ -15,7 +15,6 @@ c
       Type GasObj
         real rmgas, rgas, outgas, zgas0, drtruncgas,gamma
         real gasconst
-        real GasTemp
         integer nr
         real,ALLOCATABLE::rgasgrid(:),zgasgrid(:)
         real,ALLOCATABLE :: dens(:),pot(:),fr(:)

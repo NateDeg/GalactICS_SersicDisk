@@ -13,10 +13,13 @@ include $(locObj)
 .f.o:
 	$(F77) $(FLAGS) -c -I$(LocModLoc) *.f
 
+#F77=gfortran -ffpe-trap=invalid
+#F77=mpifort
 F77=gfortran -Wall -fpic -g -fbacktrace  -fcheck=all
 CC=gcc
+#FLAGS=-ffast-math -O0 -funroll-loops
 FLAGS=-ffixed-line-length-0 -O -fno-backslash -m64 
-CFLAGS= -O -DRINGASCII -DASCII -m64
+CFLAGS= -O -DRINGASCII -DASCII -m32
 
 
 

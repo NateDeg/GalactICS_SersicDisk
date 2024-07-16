@@ -35,7 +35,7 @@ cccccc
       real y1,yn
 ccccc
 c      print*, "In Gas Normalization"
-      open(file='in.gas',unit=1,status='old')
+      open(file='in_gas.txt',unit=1,status='old')
       read(1,*)
       read(1,*)
       read(1,*)

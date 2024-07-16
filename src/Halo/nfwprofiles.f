@@ -130,6 +130,54 @@ c     &          *Halo%drtrunchalo))/Halo%drtrunchalo
       end function
 ccccccccc
 
+cccccccc
+      subroutine dbledens(R, dens)
+      implicit none
+      real,Intent(IN) :: R
+      real,intent(out) :: dens
+      real s
+c      print*, "nfw density"
+      s = R/Halo%a
+      dens = Halo%haloconst/(s**Halo%cusp)/((1.+s)**(Halo%outerslope-Halo%cusp))
+c      print*, "nfw dens", R, s,
+c     &          Halo%haloconst/(s**Halo%cusp)/((1.+s)**(3.-Halo%cusp))
+c     &          ,Halo%a
+      return
+      end subroutine
+ccccccccccccccc
 
+ccccccccc
+      subroutine dbledensprime(R,dens1)
+      implicit none
+      real s,dens
+      real,Intent(IN) :: R
+      real,intent(out) :: dens1
+
+      s = R/Halo%a
+      call dbledens(R,dens)
+      dens1 = -dens/Halo%a*(Halo%outerslope*s+Halo%cusp)/s/(1.+s)
+      return
+      end subroutine
+ccccccccccc
+
+cccccccc
+      subroutine dbledens2prime(R,dens2)
+      implicit none
+      real s,dens
+      real,Intent(IN) :: R
+      real,intent(out) :: dens2
+      s = R/Halo%a
+      call dbledens(R,dens)
+      dens2 = dens/Halo%a/Halo%a
+     &      *(Halo%cusp*(Halo%cusp+1.)
+     &      +2.*(1.+Halo%outerslope)
+     &      *Halo%cusp*s
+     &      +Halo%outerslope*(1.+Halo%outerslope)*s*s)
+     &      /s/s/(1.+s)/(1.+s)
+
+
+      return
+      end subroutine
+ccccccccccc
 
       end module

@@ -80,9 +80,14 @@ c
         HaloDensD1Point=> TabulatedDens1Prime
         HaloDensD2Point=> TabulatedDens2Prime
       elseif(Halo%NumericalTableSwitch .eq. 0) then
-        HaloDensPoint=> nfwdens
-        HaloDensD1Point=> nfwdensprime
-        HaloDensD2Point=> nfwdens2prime
+c        HaloDensPoint=> nfwdens
+c        HaloDensD1Point=> nfwdensprime
+c        HaloDensD2Point=> nfwdens2prime
+
+        HaloDensPoint=> dbledens
+        HaloDensD1Point=> dbledensprime
+        HaloDensD2Point=> dbledens2prime
+
       elseif(Halo%NumericalTableSwitch .eq. 2) then
         HaloDensPoint=> ABGDens
         HaloDensD1Point=> ABGDens1Prime

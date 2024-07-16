@@ -21,7 +21,7 @@ ccccc
       integer funit,l
       real redge
 
-      open(file='in.gendenspsi',unit=1,status='old')
+      open(file='in_gendenspsi.txt',unit=1,status='old')
       read(1,*) npsi
       close(1)
 
@@ -58,7 +58,7 @@ ccccc
       character(*) fname
       integer funit
 
-      open(file='in.gendenspsi',unit=1,status='old')
+      open(file='in_gendenspsi.txt',unit=1,status='old')
       read(1,*) npsi
       close(1)
 
